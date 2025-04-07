@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "多标签页录制器 V2",
+  "version": "1.0",
+  "description": "同时录制多个浏览器标签页",
+  "permissions": [
+    "tabCapture",
+    "tabs",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "start": {
+      "description": "录制",
+      "suggested_key": {
+        "default": "Alt+Shift+R"
+      }
+    },
+    "stop": {
+      "description": "停止录制",
+      "suggested_key": {
+        "default": "Alt+Shift+G"
+      }
+    }
+  }
+}
